@@ -206,18 +206,6 @@ class BMIModel {
     return bmi;
   }
 
-  String get resultBmi {
-    if (calcBmi < 18.5) {
-      return "Underweight";
-    } else if (calcBmi < 25) {
-      return "Normal";
-    } else if (calcBmi < 30) {
-      return "Overweight";
-    } else {
-      return "Obese";
-    }
-  }
-
   Color get categoryColor {
     switch (resultBmi) {
       case 'Underweight':
@@ -230,6 +218,18 @@ class BMIModel {
         return Color.fromARGB(255, 181, 63, 63);
       default:
         return Color(0xff9E9E9E);
+    }
+  }
+
+  String get resultBmi {
+    if (calcBmi < 18.5) {
+      return "Underweight";
+    } else if (calcBmi < 25) {
+      return "Normal";
+    } else if (calcBmi < 30) {
+      return "Overweight";
+    } else {
+      return "Obese";
     }
   }
 }
